@@ -63,5 +63,12 @@ export default class Province {
             })
         return result
     }
+    describe("province test", ()=> {
+        it("shortfall", () =>{
+            const asia = new Province(sampleProvinceData())
+    
+            // 생산 부족분은 5로 기대 된다. 5면 테스트 성공 아니면 실패
+            assert.equal(asia.shortfall, 5)
+        })
 }
 
